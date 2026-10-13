@@ -1,0 +1,195 @@
+/* =====================================================================
+   Design tokens — "Future Starts Here"
+   Brand colours live at the top of :root. To apply the school's own
+   identity, change the --brand-* values; everything else derives from them
+   or from the neutral scales below.
+   ===================================================================== */
+
+/* ---- Self-hosted fonts (SIL Open Font License, see fonts/LICENSE-*) ---- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-latin-400-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-latin-ext-400-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("../fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("../fonts/jetbrains-mono-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* ---- Brand (customise these) ---- */
+  --brand-ink: #0B1530;        /* deep midnight navy — anchor colour */
+  --brand-ink-deep: #070E22;
+  --brand-ivory: #F5F1E8;      /* warm off-white page */
+  --brand-accent: #2C50E6;     /* electric blue — actions & data */
+  --brand-accent-strong: #1D3BC2;
+  --brand-highlight: #F2B45A;  /* warm amber — used sparingly on dark */
+
+  /* ---- Ink scale ---- */
+  --ink-950: var(--brand-ink-deep);
+  --ink-900: var(--brand-ink);
+  --ink-800: #16224A;
+  --ink-700: #26335F;
+  --ink-600: #3A4673;
+  --ink-500: #565F84;
+  --ink-400: #858DAA;
+  --ink-300: #B6BCCF;
+  --ink-200: #D8DBE5;
+  --ink-100: #ECEEF3;
+  --ink-50:  #F4F5F8;
+
+  /* ---- Ivory scale ---- */
+  --ivory-50:  #FFFDF9;
+  --ivory-100: #FBF8F2;
+  --ivory-200: var(--brand-ivory);
+  --ivory-300: #EBE5D8;
+  --ivory-400: #DCD3C1;
+
+  /* ---- Accent / status ---- */
+  --blue-800: #1A2F94;
+  --blue-700: var(--brand-accent-strong);
+  --blue-600: var(--brand-accent);
+  --blue-400: #7A93FF;
+  --blue-300: #A7B7FF;
+  --blue-200: #C9D3FF;
+  --blue-100: #E2E8FF;
+  --blue-50:  #F1F4FF;
+
+  --amber-400: var(--brand-highlight);
+  --amber-800: #7A4A00;
+  --amber-200: #F6D9A6;
+  --amber-100: #FCEFD6;
+  --amber-50:  #FEF8EC;
+
+  --teal-800: #0A5A52;
+  --teal-600: #0F7E73;
+  --teal-100: #D3EFEA;
+  --teal-50:  #EEF9F7;
+
+  --red-800: #8E1D17;
+  --red-700: #B3261E;
+  --red-200: #F3C2BD;
+  --red-100: #FBE2DF;
+  --red-50:  #FEF3F1;
+
+  /* ---- Semantic ---- */
+  --bg: var(--ivory-200);
+  --surface: var(--ivory-50);
+  --surface-2: var(--ivory-100);
+  --text: var(--ink-900);
+  --text-2: var(--ink-600);
+  --text-muted: var(--ink-500);
+  --line: rgba(11, 21, 48, 0.10);
+  --line-strong: rgba(11, 21, 48, 0.20);
+  --line-on-dark: rgba(245, 241, 232, 0.12);
+  --accent: var(--blue-600);
+  --accent-hover: var(--blue-700);
+  --focus: var(--blue-600);
+  --focus-on-dark: var(--amber-400);
+
+  /* ---- Typography ---- */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 1.45rem + 1.1vw, 2.375rem);
+  --text-3xl: clamp(2.125rem, 1.6rem + 2.1vw, 3.25rem);
+  --text-display: clamp(3.25rem, 1.9rem + 5.6vw, 6.75rem);
+
+  /* ---- Space ---- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.25rem;
+  --s-6: 1.5rem;
+  --s-7: 2rem;
+  --s-8: 2.5rem;
+  --s-9: 3rem;
+  --s-10: 4rem;
+  --s-11: 5rem;
+
+  /* ---- Shape & depth ---- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-2xl: 28px;
+
+  --shadow-sm: 0 1px 2px rgba(11, 21, 48, 0.06);
+  --shadow-md: 0 1px 2px rgba(11, 21, 48, 0.05), 0 8px 20px -10px rgba(11, 21, 48, 0.18);
+  --shadow-lg: 0 1px 3px rgba(11, 21, 48, 0.05), 0 30px 60px -32px rgba(11, 21, 48, 0.32);
+  --shadow-xl: 0 2px 6px rgba(7, 14, 34, 0.08), 0 40px 90px -30px rgba(7, 14, 34, 0.55);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 420ms;
+
+  /* ---- Layout ---- */
+  --container: 1200px;
+  --gutter: clamp(16px, 4vw, 40px);
+}

@@ -1,0 +1,16 @@
+<?php
+/*
+ * Placeholder brand mark: an open arched doorway with a rising sun —
+ * "Nyílt nap" (open day). Original abstract artwork, NOT an official logo.
+ * Replace with the school's own logo (see README → Arculat).
+ * @var string $class
+ */
+?>
+<svg class="<?= e($class ?? 'brand__mark') ?>" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <rect width="48" height="48" rx="12" fill="#0B1530"/>
+  <rect x=".75" y=".75" width="46.5" height="46.5" rx="11.25" fill="none" stroke="#F6F2E9" stroke-opacity=".14" stroke-width="1.5"/>
+  <path d="M17 38V22.5a7 7 0 0 1 14 0V38z" fill="#2C50E6"/>
+  <path d="M19.6 38a4.4 4.4 0 0 1 8.8 0z" fill="#F2B45A"/>
+  <path d="M17 22.6l-6-3.1v22.2l6-3.7z" fill="#F6F2E9"/>
+  <path d="M9 38h30" stroke="#F6F2E9" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
